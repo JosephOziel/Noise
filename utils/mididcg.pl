@@ -1,16 +1,17 @@
-:- module(mididcg, [ midi//3
-                   , noteon//3, noteoff//2
-                   , note//4, note//5
-                   , prog//2, prog//3 , prog//4
-                   , pan//2, volume//2
-						 , tempo//1, keysig//2, timesig//1
-                   , instr//2
+
+:- module(mididcg, [ midi/3
+                   , noteon/3, noteoff/2
+                   , note/4, note/5
+                   , prog/2, prog/3 , prog/4
+                   , pan/2, volume/2
+						 , tempo/1, keysig/2, timesig/1
+                   , instr/2
                    ]).
 
 :- use_module(library(clpfd)).
-:- use_module(library(dcg_pair)).
-:- use_module(library(dcg_core), [get//1, set//1]).
-:- use_module(library(genmidi), [gm/4]).
+:- use_module(dcg_pair).
+:- use_module(dcg_core, [get//1, set//1]).
+:- use_module(genmidi, [gm/4]).
 
 midi(Msg,Arg1,Arg2) --> get(T) <\> [msg(T,M,Arg1,Arg2)], {M #= Msg}.
 midi(Msg,Arg1)      --> get(T) <\> [msg(T,M,Arg1)], {M #= Msg}.
