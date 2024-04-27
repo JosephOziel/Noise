@@ -2,3 +2,6 @@ Pattern Matching from prolog and stuff
 Take a lot of inspiration from Factor
 Combinators from Joy
 Array operations and manipulation from array languages like K and APL etc
+
+FACTOR COMBINATORS: https://docs.factorcode.org/content/article-combinators.html
+JOY COMBINATORS: https://github.com/joes-esolangs/cassette/blob/main/examples/combinators.cte 
