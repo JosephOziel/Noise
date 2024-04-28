@@ -19,5 +19,9 @@ FULL LIST: https://docs.factorcode.org/content/article-handbook-language-referen
 [ 2 + ] \ - suffix                         ! Quotation [ 2 + - ]
 
 RECURSION
-SYMBOLS/LITERALS: 12 -12 1.2 "hi" :hi
-OBJECTS: words, lists/seqs, quotes (fried too)  
+PARSE: EVERYTHING AS A SYMBOL BESIDES LITERALS. LIKE FACTOR, everything is seperated by whitespace
+SYMBOLS/LITERALS: 12 -12 1.2 "hi" :hi (atoms)
+OBJECTS: words, lists/seqs, quotes (fried too), quotations with pattern matching arguments
+PATTERNS: treat patterns as objects, with a function "match" to compare them. 
+
+TRY AND CREATE PYTHON INTERFACE

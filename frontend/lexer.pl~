@@ -59,7 +59,7 @@ tokenize([0':|T_i], [Out|T_o], LineNo) :-
 
 % word
 tokenize([In|T_i], [Out|T_o], LineNo) :-
-    code_type(In, graph),
+    ident_type(In, first),
     consume_type([In|T_i], graph, Remain, CharList),
     string_codes(Name, CharList),
     Out = word(Name, LineNo),

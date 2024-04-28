@@ -22,3 +22,11 @@ write_file(MIDI, FileName) :-
     py_call(open(FileName, "wb"), File, [py_object(true)]),
     py_call(MIDI:writeFile(File)),
     py_call(File:close()).
+
+mUSIC :-
+    create_midi(MIDI),
+    prog_change(MIDI, 0, 0, 0, 1),
+    add_tempo(MIDI, 0, 0, 120),
+    add_note(MIDI, 0, 0, 60, 0, 1, 100),
+    add_note(MIDI, 0, 0, 61, 1, 1, 100),
+    write_file(MIDI, "C:/Users/vatis/OneDrive/Documents/Sikum/backend/test.mid").
