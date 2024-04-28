@@ -1,10 +1,17 @@
-Pattern Matching from prolog and stuff
+Pattern Matching from prolog and stuff, also try logic stuff
 Take a lot of inspiration from Factor
-Combinators from Joy
+Combinators from Joy. Also recursive combinators from joy
 Array operations and manipulation from array languages like K and APL etc
+
+DEQUEUE AS UNDERLYING DATASTRUCTURE (implement in prolog):
+    Syntax:
+        > for the right
+        < for the left
 
 FACTOR COMBINATORS: https://docs.factorcode.org/content/article-combinators.html
 JOY COMBINATORS: https://github.com/joes-esolangs/cassette/blob/main/examples/combinators.cte 
+    https://www.kevinalbrecht.com/code/joy-mirror/joy.html
+    https://www.kevinalbrecht.com/code/joy-mirror/j05cmp.html 
 
 WORDS: are just sugar for a quotation. When called put the quotation on the stack and the call word. 
 FACTOR WORDS: https://docs.factorcode.org/content/article-words.html
@@ -27,3 +34,5 @@ PATTERNS: treat patterns as objects, with a function "match" to compare them.
 TRY AND CREATE PYTHON INTERFACE
 
 OTHER POSSIBLE NAME: raash (as opposed to noise)
+
+XY LANG: https://www.nsl.com/k/xy/xy.htm
