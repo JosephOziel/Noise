@@ -25,3 +25,5 @@ OBJECTS: words, lists/seqs, quotes (fried too), quotations with pattern matching
 PATTERNS: treat patterns as objects, with a function "match" to compare them. 
 
 TRY AND CREATE PYTHON INTERFACE
+
+OTHER POSSIBLE NAME: raash (as opposed to noise)

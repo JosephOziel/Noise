@@ -54,7 +54,7 @@ tokenize([0':|T_i], [Out|T_o], LineNo) :-
     consume_type([0''|T_i], graph, Remain, [_|Codes]),
     string_codes(Value, Codes),
     atom_string(A, Value),
-    Out = lit(atom(A), LineNo),
+    Out = lit(A, LineNo),
     tokenize(Remain, T_o, LineNo).
 
 % word

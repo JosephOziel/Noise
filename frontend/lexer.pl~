@@ -53,13 +53,13 @@ tokenize([0'"|T_i], [Out|T_o], LineNo) :-
 tokenize([0':|T_i], [Out|T_o], LineNo) :-
     consume_type([0''|T_i], graph, Remain, [_|Codes]),
     string_codes(Value, Codes),
-    atom_string(A, Value),
-    Out = lit(atom(A), LineNo),
+%    atom_string(A, Value),
+    Out = lit(Value, LineNo),
     tokenize(Remain, T_o, LineNo).
 
 % word
 tokenize([In|T_i], [Out|T_o], LineNo) :-
-    ident_type(In, first),
+    code_type(In, graph),
     consume_type([In|T_i], graph, Remain, CharList),
     string_codes(Name, CharList),
     Out = word(Name, LineNo),
