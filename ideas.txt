@@ -5,3 +5,19 @@ Array operations and manipulation from array languages like K and APL etc
 
 FACTOR COMBINATORS: https://docs.factorcode.org/content/article-combinators.html
 JOY COMBINATORS: https://github.com/joes-esolangs/cassette/blob/main/examples/combinators.cte 
+
+WORDS: are just sugar for a quotation. When called put the quotation on the stack and the call word. 
+FACTOR WORDS: https://docs.factorcode.org/content/article-words.html
+https://docs.factorcode.org/content/article-quotations.html 
+STACK STUFF OPERATORS: https://docs.factorcode.org/content/article-shuffle-words.html 
+
+FULL LIST: https://docs.factorcode.org/content/article-handbook-language-reference.html
+
+! And if you want to get meta, quotations are sequences and can be dismantled..
+0 [ 2 + ] nth                              ! 2
+1 [ 2 + ] nth                              ! +
+[ 2 + ] \ - suffix                         ! Quotation [ 2 + - ]
+
+RECURSION
+SYMBOLS/LITERALS: 12 -12 1.2 "hi" :hi
+OBJECTS: words, lists/seqs, quotes (fried too)  
