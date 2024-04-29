@@ -1,6 +1,6 @@
 [ 1 2 3 ] call
 
-[( a [ 1 b |> _ ] ) a b ] % should a and b get popped?
-% turns into [ ( a [ 1 b |> _ ] ) match a b ]
+[( a [ 1 b :> _ ] ) a b ] % should a and b get popped?
+% turns into [ ( a [ 1 b :> _ ] ) match a b ], the pattern matching for the quote also works backwards with <:
 
 '[ 1 _ + ] % fried quote, turns into compositional combinators
