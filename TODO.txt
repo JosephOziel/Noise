@@ -1,2 +1,9 @@
-- Lexer
-- Parser
+- Lexer (DONE)
+- Basic Parser ()
+- Full Implementation of MIDI ()
+- DEQUE implementation from PYTHON ()
+- Quotation implementation ()
+- pattern implementation and match function ()
+- quotations with arguments ()
+- word definition syntax ()
+- Module imports (to start writing std) ()

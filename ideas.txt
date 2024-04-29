@@ -4,6 +4,7 @@ Combinators from Joy. Also recursive combinators from joy
 Array operations and manipulation from array languages like K and APL etc
 
 QUOTATIONS: https://docs.factorcode.org/content/article-locals-fry.html 
+FRIED QUOTES IMPL AND ARGUMENT QUOTES: https://docs.factorcode.org/content/article-compiler-impl.html https://docs.factorcode.org/content/article-fry.html https://docs.factorcode.org/content/word-fry%2Cfry.html
 
 TREAT PATTERNS AS OBJECTS: with a `match` function to match a pattern to the stack. create special notation for patterns.
 
@@ -11,6 +12,7 @@ DEQUEUE AS UNDERLYING DATASTRUCTURE (implement in prolog):
     Syntax:
         > for the right
         < for the left
+    Add function that allows you to rotate the whole deque
 
 FACTOR COMBINATORS: https://docs.factorcode.org/content/article-combinators.html
 JOY COMBINATORS: https://github.com/joes-esolangs/cassette/blob/main/examples/combinators.cte 

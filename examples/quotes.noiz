@@ -1,0 +1,6 @@
+[ 1 2 3 ] call
+
+[( a [ 1 b |> _ ] ) a b ] % should a and b get popped?
+% turns into [ ( a [ 1 b |> _ ] ) match a b ]
+
+'[ 1 _ + ] % fried quote, turns into compositional combinators
