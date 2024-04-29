@@ -3,6 +3,10 @@ Take a lot of inspiration from Factor
 Combinators from Joy. Also recursive combinators from joy
 Array operations and manipulation from array languages like K and APL etc
 
+QUOTATIONS: https://docs.factorcode.org/content/article-locals-fry.html 
+
+TREAT PATTERNS AS OBJECTS: with a `match` function to match a pattern to the stack. create special notation for patterns.
+
 DEQUEUE AS UNDERLYING DATASTRUCTURE (implement in prolog):
     Syntax:
         > for the right
