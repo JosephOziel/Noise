@@ -25,7 +25,7 @@ def pop_right(deq):
 def pop_left(deq):
     deq = deque(deq)
     d = deq.popleft()
-    return (deq, d)
+    return (deq, d) 
 
 def extend_right(deq, list):
     deq = deque(deq)
