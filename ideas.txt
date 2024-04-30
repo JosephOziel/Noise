@@ -3,6 +3,8 @@ Take a lot of inspiration from Factor
 Combinators from Joy. Also recursive combinators from joy
 Array operations and manipulation from array languages like K and APL etc
 
+Rhythm language for MIDI cool rhythms? https://github.com/Jackojc/cane/blob/neo-cane/doc/ideas.md https://nestup.cutelab.nyc/ https://pbat.ch/proj/prop.html
+
 QUOTATIONS: https://docs.factorcode.org/content/article-locals-fry.html 
 FRIED QUOTES IMPL AND ARGUMENT QUOTES: https://docs.factorcode.org/content/article-compiler-impl.html https://docs.factorcode.org/content/article-fry.html https://docs.factorcode.org/content/word-fry%2Cfry.html
 
