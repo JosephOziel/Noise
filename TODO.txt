@@ -1,9 +1,23 @@
-- Lexer (DONE)
+IMMINENT BUGS:
+- the split quote pattern matching wont parse. FIX ()
+
+STILL TODO:
+
+- Lex and Tokenize Negative Numbers ()
 - Basic Parser ()
 - Full Implementation of MIDI ()
-- DEQUE implementation from PYTHON ()
+
 - Quotation implementation ()
 - pattern implementation and match function ()
+- IMPLEMENT RECURSION !! ()
 - quotations with arguments ()
 - word definition syntax ()
 - Module imports (to start writing std) ()
+- implement all the combinators from factor and recursive ones from joy etc ()
+
+DONE:
+- Lexer (DONE)
+- DEQUE implementation from PYTHON (DONE)
+
+ADD TO DOCUMENTATION LATER: to push a literal to the other side of the deque do: 1 rot. rot has no < > variant
+    using pattern matching to assign variables, you can push the values to either side: 1 ( a ) match <a >a

@@ -14,18 +14,18 @@ def append_right(deq, a):
 
 def append_left(deq, a):
     deq = deque(deq)
-    deq.appendLeft(a)
+    deq.appendleft(a)
     return deq
 
 def pop_right(deq):
     deq = deque(deq)
-    deq.pop()
-    return deq
+    d = deq.pop()
+    return (deq, d)
 
 def pop_left(deq):
     deq = deque(deq)
-    deq.popLeft()
-    return deq
+    d = deq.popleft()
+    return (deq, d)
 
 def extend_right(deq, list):
     deq = deque(deq)
@@ -34,7 +34,7 @@ def extend_right(deq, list):
 
 def extend_left(deq, list):
     deq = deque(deq)
-    deq.extendLeft(list)
+    deq.extendleft(list)
     return deq
 
 def clear(deq):

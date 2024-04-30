@@ -25,7 +25,7 @@ consume_until(T, 0'\n, Remain, _),
 NextLineNo is LineNo + 1, !,
 tokenize(Remain, Out, NextLineNo).
 
-% numbers
+% numbers (add negative numbers, and hex)
 tokenize([In|T_i], [Out|T_o], LineNo) :-
     code_type(In, digit),
     consume_type([In|T_i], digit, [0'.|Next], WholeDigits),
@@ -39,7 +39,7 @@ tokenize([In|T_i], [Out|T_o], LineNo) :-
     code_type(In, digit),
     consume_type([In|T_i], digit, Remain, DigitList),
     number_codes(Value, DigitList),
-    Out = lit_t(Value, LineNo),
+    Out = lit(Value, LineNo),
     tokenize(Remain, T_o, LineNo).
 
 % strings
@@ -49,20 +49,29 @@ tokenize([0'"|T_i], [Out|T_o], LineNo) :-
     Out = lit(Value, LineNo),
     tokenize(Remain, T_o, LineNo).
 
-% symbols
+% atoms
 tokenize([0':|T_i], [Out|T_o], LineNo) :-
-    consume_type([0''|T_i], graph, Remain, [_|Codes]),
+    consume_type([0':|T_i], graph, Remain, [_|Codes]),
     string_codes(Value, Codes),
     atom_string(A, Value),
     Out = lit(A, LineNo),
     tokenize(Remain, T_o, LineNo).
 
 % word
+tokenize([A|T_i], [Out|T_o], LineNo) :-
+    (   A = 0'< ; A = 0'> ),
+    consume_type([A|T_i], graph, Remain, [_|Codes]),
+    string_codes(Value, Codes),
+    string_codes(T, [A]),
+    Out = word(T, Value, LineNo),
+    tokenize(Remain, T_o, LineNo).
+
+% word_s
 tokenize([In|T_i], [Out|T_o], LineNo) :-
-    code_type(In, graph),
+    code_type(In, graph), In \= 0'",
     consume_type([In|T_i], graph, Remain, CharList),
     string_codes(Name, CharList),
-    Out = word(Name, LineNo),
+    Out = word_s(Name, LineNo),
     tokenize(Remain, T_o, LineNo).
 
 % utils
