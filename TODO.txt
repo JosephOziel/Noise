@@ -1,8 +1,10 @@
 IMMINENT BUGS:
 - the split quote pattern matching wont parse. FIX (DONE)
-- Make prolog fail if it can't parse something.
+- Make prolog fail if it can't parse something. URGENT
 
 STILL TODO:
+
+- Error messages for parser using line numbers ()
 
 - Lex and Tokenize Negative Numbers ()
 - FRied Quotes (maybe also fried patterns?)
@@ -12,7 +14,6 @@ STILL TODO:
 - pattern implementation and match function ()
 - IMPLEMENT RECURSION !! ()
 - quotations with arguments ()
-- word definition syntax ()
 - Module imports, also need to introduce private marker. and figure out where std is (to start writing std) ()
 - implement all the combinators from factor and recursive ones from joy etc ()
 
@@ -20,6 +21,7 @@ DONE:
 - Lexer (DONE)
 - DEQUE implementation from PYTHON (DONE)
 - Basic Parser (DONE)
+- word definition syntax (DONE)
 
 ADD TO DOCUMENTATION LATER: to push a literal to the other side of the deque do: 1 rot. rot has no < > variant
     - using pattern matching to assign variables, you can push the values to either side: 1 ( a ) -> <a >a
