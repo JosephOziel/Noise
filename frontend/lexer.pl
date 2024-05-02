@@ -75,7 +75,6 @@ tokenize([In|T_i], [Out|T_o], LineNo) :-
     tokenize(Remain, T_o, LineNo).
 
 % utils
-
 consume_type([], _, [], []).
 consume_type([Char|In], Type, Remain, [Char|Out]) :-
     code_type(Char, Type),
