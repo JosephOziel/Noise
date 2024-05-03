@@ -1,1 +1,4 @@
-use ../examples/use_test2.nz ; { a 1 + } { b [ 1 + ] call } pv { c nothing }
+%use ../examples/use_test2.nz ; 
+{ a 1 + }
+{ b [ 1 + ] call }
+pv { c nothing }

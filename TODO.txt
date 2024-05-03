@@ -24,6 +24,9 @@ DONE:
 - Basic Parser (DONE)
 - word definition syntax (DONE)
 
+QUESTION IDEAS:
+- Maybe add a marker to make a word recursive, so that its body is added to its context.
+
 ADD TO DOCUMENTATION LATER: to push a literal to the other side of the deque do: 1 rot. rot has no < > variant
     - using pattern matching to assign variables, you can push the values to either side: 1 ( a ) -> <a >a
     - you can match a pattern to the left side with <- and to the right with -> 
