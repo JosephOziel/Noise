@@ -1,10 +1,11 @@
 IMMINENT BUGS:
 - the split quote pattern matching wont parse. FIX (DONE)
-- Make prolog fail if it can't parse something. URGENT
+- Make prolog fail if it can't parse something. URGENT (DONE)
 
 STILL TODO:
 
 - Error messages for parser using line numbers ()
+- implement parsing the modules a module imports, and adding them to a context. ASK IN PROGLANG DISCORD ()
 
 - Lex and Tokenize Negative Numbers ()
 - FRied Quotes (maybe also fried patterns?)

@@ -32,7 +32,7 @@ word(word(left, Name, L)) --> [word("<", Name, L)].
 word(word_s(Name, L)) --> [word_s(Name, L)], {\+ member(Name, ["{", "}", "[", "]", "(", ")", ";"])}.
 
 % maybe add shorthand for quote with variables, and then desugar it later
-quote(quote(Body, L)) --> [word_s("[", L)], program(Body), [word_s("]", _)].
+quote(quote(Body, L)) --> [word_s("[", L)], program(prog(_, Body)), [word_s("]", _)].
 
 % maybe allow nested objects?
 pat_obj(pattern_obj(Pats, L)) --> [word_s("(", L)], pats(Pats), [word_s(")", _)].
@@ -44,6 +44,6 @@ pat(quote(Quote)) --> [word_s("[", _)], pats(Quote), [word_s("]", _)].
 pat(lit(Lit)) --> [lit(Lit, _)].
 pat(var(Name)) --> !, [word_s(Name, _)], {\+ member(Name, ["|<", "|>", "[", "]"])}.
 
-word_def(def(Vis, Name, Body, L)) --> (([word_s("pv", _)], {Vis = pv}) ; {Vis = pub}), [word_s("{", L), word_s(Name, _)],  program(Body), [word_s("}", _)].
+word_def(def(Vis, Name, Body, L)) --> (([word_s("pv", _)], {Vis = pv}) ; {Vis = pub}), [word_s("{", L), word_s(Name, _)],  program(prog(_, Body)), [word_s("}", _)].
 
 alias(alias(NewName, Name, L)) --> [word_s("rw", L), word_s(NewName, _), word_s(Name, _)].

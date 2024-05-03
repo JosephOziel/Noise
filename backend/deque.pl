@@ -18,9 +18,10 @@
               rotate/3
           ]).
 
+:- working_directory(_, "../frontend").
 :- use_module(library(janus)).
 
-lib :- py_add_lib_dir("C:/Users/vatis/OneDrive/Documents/Noise/backend").
+lib :- py_add_lib_dir("../backend").
 lib.
 
 create_empty(D) :-
