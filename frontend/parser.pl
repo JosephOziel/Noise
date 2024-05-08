@@ -16,13 +16,13 @@ pparse(Code) :-
 
 program(prog(Uses, [Node|Rest])) --> (use(Uses) | {Uses = []}), item(Node), (program(prog(_, Rest)) | {Rest = []}).
 
-item(Node) --> lit(Node) | quote(Node) | pat_obj(Node) | alias(Node) | word_def(Node) | word(Node).
+item(Node) --> lit(Node) | quote(Node) | pat_obj(Node) | alias(Node) | word_def(Node) | word(Node) | error(Node).
 
 use(Files) --> [word_s("use", _)], files(Files), [word_s(";", _)].
 files([File|Rest]) --> [word_s(File, _)], (files(Rest) | {Rest = []}).
 
 lit(num(N, L)) --> [lit(N, L)], {number(N)}.
-lit(str(S, L)) --> [lit(S, L)], {string(S)}.
+lit(str(S, L)) --> [lit(S, L)], {is_list(S)}. % string(S)
 lit(true(L)) --> [word_s("t", L)].
 lit(false(L)) --> [word_s("f", L)].
 lit(atom(A, L)) --> [lit(A, L)], {atom(A)}.
@@ -47,3 +47,6 @@ pat(var(Name)) --> !, [word_s(Name, _)], {\+ member(Name, ["|<", "|>", "[", "]"]
 word_def(def(Vis, Name, Body, L)) --> (([word_s("pv", _)], {Vis = pv}) ; {Vis = pub}), [word_s("{", L), word_s(Name, _)],  program(prog(_, Body)), [word_s("}", _)].
 
 alias(alias(NewName, Name, L)) --> [word_s("rw", L), word_s(NewName, _), word_s(Name, _)].
+
+% make this work
+error(_) --> [word_s(_, L) ; word(_, _, L) ; lit(_, L)], {throw(format("Parser Error on Line ~a : I don't know what is wrong, but fix it.", L))}.

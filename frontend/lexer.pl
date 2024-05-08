@@ -45,8 +45,8 @@ tokenize([In|T_i], [Out|T_o], LineNo) :-
 % strings
 tokenize([0'"|T_i], [Out|T_o], LineNo) :-
     consume_until(T_i, 0'", Remain, Codes),
-    string_codes(Value, Codes),
-    Out = lit(Value, LineNo),
+%    string_codes(Value, Codes),
+    Out = lit(Codes, LineNo),
     tokenize(Remain, T_o, LineNo).
 
 % atoms

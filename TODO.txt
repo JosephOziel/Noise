@@ -1,6 +1,7 @@
 IMMINENT BUGS:
 - the split quote pattern matching wont parse. FIX (DONE)
 - Make prolog fail if it can't parse something. URGENT (DONE)
+- fix parser error messsages ()
 
 STILL TODO:
 
